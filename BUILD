@@ -1,4 +1,4 @@
-# These two targets created by me
+# These two targets were created by me
 
 java_library(
     name = "dagger_all",
