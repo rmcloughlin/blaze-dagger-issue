@@ -10,13 +10,16 @@ java_library(
 java_plugin(
     name = "dagger_plugin",
     processor_class = "dagger.internal.codegen.ComponentProcessor",
-    deps = [":com_google_dagger_dagger", ":com_google_dagger_dagger_compiler", ":com_google_dagger_dagger_producers"])
-
+    deps = [
+        ":com_google_dagger_dagger",
+        ":com_google_dagger_dagger_compiler",
+        ":com_google_dagger_dagger_producers",
+    ],
+)
 
 # The following dependencies were calculated from:
 # com.google.dagger:dagger:2.11
 # com.google.dagger:dagger-compiler:2.11
-
 
 java_library(
     name = "com_google_code_findbugs_jsr305",
@@ -30,9 +33,9 @@ java_library(
     name = "com_google_dagger_dagger_compiler",
     visibility = ["//visibility:public"],
     exports = [
-        "@com_google_dagger_dagger_compiler//jar",
         "@com_google_code_findbugs_jsr305//jar",
         "@com_google_dagger_dagger//jar",
+        "@com_google_dagger_dagger_compiler//jar",
         "@com_google_dagger_dagger_producers//jar",
         "@com_google_errorprone_javac//jar",
         "@com_google_googlejavaformat_google_java_format//jar",
@@ -46,9 +49,9 @@ java_library(
     name = "com_google_dagger_dagger_producers",
     visibility = ["//visibility:public"],
     exports = [
-        "@com_google_dagger_dagger_producers//jar",
         "@com_google_code_findbugs_jsr305//jar",
         "@com_google_dagger_dagger//jar",
+        "@com_google_dagger_dagger_producers//jar",
         "@com_google_guava_guava//jar",
         "@javax_inject_javax_inject//jar",
     ],
@@ -99,9 +102,8 @@ java_library(
     name = "com_google_googlejavaformat_google_java_format",
     visibility = ["//visibility:public"],
     exports = [
-        "@com_google_googlejavaformat_google_java_format//jar",
         "@com_google_errorprone_javac//jar",
+        "@com_google_googlejavaformat_google_java_format//jar",
         "@com_google_guava_guava//jar",
     ],
 )
-
