@@ -1,3 +1,5 @@
+Repository for the problem described in bazel-discuss here:  https://groups.google.com/forum/#!topic/bazel-discuss/qj00aCNTZPQ
+
 Bazel version: 0.5.1
 
 WORKSPACE and BUILD files originally created using:
